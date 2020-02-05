@@ -1,0 +1,315 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+ 
+}
+
+
+body {
+  overflow: hidden;
+  background: url(https://blenderartists.org/uploads/default/original/4X/7/e/2/7e2d7bea4ac21388c4a96e1371f375c4ce00094b.jpg);
+}
+
+#solarsystem {
+  height: 900px;
+  width: 900px;
+  position: relative;
+  
+  /* border: 1px solid black; */
+  transform:scale(0.5);
+}
+
+/* ------------------------------------------------------------- */
+#sun, .planet {
+  border-radius: 50%;
+  position: absolute;
+}
+
+.planet {
+  border: 2px dashed white;
+}
+
+#sun {
+  width: 100px;
+  height: 100px;
+  left: 400px;
+  top: 400px;
+  background: url(../img/soleil.png);
+  background-size: cover;
+}
+
+#mercury {
+  width: 200px;
+  height: 200px;
+  left:350px;
+  top: 350px;
+  animation: orbit 7.23s linear infinite;
+  
+  
+}
+
+#mercury::after{
+  content: "";
+  width:10px;
+  height: 10px;
+  top: 61px;
+  background: url(../img/planet2.png);
+  background-size: cover;
+}
+
+#venus {
+  width: 300px;
+  height: 300px;
+  left: 300px;
+  top: 300px;
+  animation: orbit 18.45s linear infinite;
+
+}
+
+#venus::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 83px;
+  background: url(../img/mars.png);
+  background-size: cover;
+}
+
+#earth {
+  width: 400px;
+  height: 400px;
+  top: 250px;
+  left: 250px;
+  animation: orbit 30s linear infinite;
+
+}
+
+#earth::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  top: 115px;
+  background: url(../img/terre.png);
+  background-size: cover;
+}
+
+#mars {
+  width: 500px;
+  height: 500px;
+  top: 200px;
+  left: 200px;
+  animation: orbit 56.43s linear infinite;
+
+}
+
+#mars::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  top: 186px;
+  background: url(../img/planet3.png);
+  background-size: cover;
+}
+
+#jupiter {
+  width: 700px;
+  height: 700px;
+  top: 100px;
+  left: 100px;
+  animation: orbit 355.8s linear infinite;
+  
+}
+
+#jupiter::after {
+  content: "";
+  width: 90px;
+  height: 90px;
+  top: 130px;
+  background: url(../img/planet4.png);
+  background-size: cover;
+}
+
+#saturne {
+  width: 1000px;
+  height: 1000px;
+  top: -50px;
+  left: -50px;
+  animation: orbit 883.8s linear infinite;
+ 
+}
+
+#saturne::after {
+  content: "";
+  width:90px;
+  height:90px;
+  top:240px;
+  background: url(../img/saturne.png);
+  background-size: cover;
+}
+
+#uranus {
+  width: 1300px;
+  height: 1300px;
+  top: -200px;
+  left: -200px;
+  animation: orbit 2520.3s linear infinite;
+
+}
+
+#uranus::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  top: 390px;
+  background: url(../img/planet5.png);
+  background-size: cover;
+}
+
+#neptune {
+  width: 1600px;
+  height: 1600px;
+  top: -350px;
+  left: -350px;
+  animation: orbit 4944s linear infinite;
+  
+}
+
+#neptune::after {
+  content: "";
+  width: 60px;
+  height: 60px;
+  top: 546px;
+  background: url(../img/planet1.png);
+  background-size: cover;
+}
+
+/* ------------ */
+#sun, 
+#mercury::after,
+#venus::after,
+#earth::after,
+#mars::after,
+#jupiter::after,
+#saturne::after,
+#uranus::after,
+#neptune::after {
+  position: absolute;
+  border-radius: 50%;
+  
+  
+}
+
+
+#xwing{
+  position: absolute;
+  left: -500px;
+  top:50px;
+  width:250px;
+  height: 154px;
+  animation: theforce 15s linear infinite;
+  background: url('../img/xwing.png');
+  background-size: cover;
+  
+  
+  
+}
+
+#info{
+  margin-top: 200px;
+  margin-right: 100px;
+  float: right;
+  width: 200px;
+  height: 300px;
+  border: solid white 2px;
+  background: black ;
+  font-family: 'Sigmar One', cursive;
+  font-size: 2em;
+  text-align: center;
+  border-radius: 20px;
+  cursor: url('../img/cursor.cur'),pointer;
+
+
+}
+
+a, li{ color:white;
+  text-decoration: none;
+  list-style-type: none;
+  
+  }
+
+/* ------------------------------------------------------- */
+@keyframes orbit {
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes theforce{
+  0%{
+    left: -500px;
+  }
+  100%{
+    left: 100%;
+  }
+}
+
+/*-----------------------------*/
+
+
+ul#descriptions {
+  position: absolute;
+  top: 220px;
+  right: 120px;
+  list-style: none;
+}
+ul#descriptions h2 {
+  
+  color: white;
+  
+  -webkit-transition: all 0.15s ease-in;
+  -moz-transition: all 0.15s ease-in;
+  -o-transition: all 0.15s ease-in;
+  transition: all 0.15s ease-in;
+  font-size: 25px;
+  position: relative;
+  z-index: 101;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+margin-bottom: -15px;
+}
+ul#descriptions h2:hover {
+ color: rgb(238, 224, 26); 
+  -webkit-transform: scale(1.08);
+  -moz-transform: scale(1.08);
+  -o-transform: scale(1.08);
+  transform: scale(1.08);
+}
+ul#descriptions li p {
+  position: absolute;
+  left: -250px;
+  top: 0;
+  width: 200px;
+  display: inline;
+  opacity: 0;
+  visibility: hidden;
+  font-size: 13px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-transition: all 0.3s ease-in;
+  -moz-transition: all 0.3s ease-in;
+  -o-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  background: black;
+  padding: 30px;
+  color: white;
+  line-height: 1.7;
+  z-index: 100;
+  border: 1px solid white;
+}
+ul#descriptions h2:hover+p {
+  visibility: visible;
+  opacity: 0.9;
+  left: -280px;
+}
